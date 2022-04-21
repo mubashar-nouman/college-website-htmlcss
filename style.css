@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* #######################  HEADER SECTION  ###################### */
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(68, 71, 85, 0.7), rgba(4, 9, 30, 0.7)), url('/img/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 8%;
+}
+
+.navbar img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links ul a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 0px 12px;
+}
+
+.nav-links ul a:hover {
+    color: grey;
+}
+
+
+/* #######################  SHOWCASE SECTION  ###################### */
+
+.text-box {
+    color: white;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.text-box p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.text-box a {
+    font-size: 16px;
+    display: inline-block;
+    padding: 12px 34px;
+    border: 1px solid rgb(204, 54, 54);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(204, 54, 54) 50%, rgb(59, 58, 58) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+.text-box a:hover {
+    color: white;
+    background-position: left bottom;
+}
+
+@media (max-width:700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* #######################  COURSES SECTION  ###################### */
+
+.courses {
+    width: 80%;
+    margin: 100px auto;
+    /* padding-top: 100px; */
+    text-align: center;
+}
+
+.courses h1 {
+    font-size: 2rem;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.course-box {
+    margin: 20px;
+    background: #f5e4e4;
+    padding: 20px 12px;
+    flex-basis: 31%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.course-box h3 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+.course-box:hover {
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0, 0.2);
+}
+
+@media (max-width:700px) {
+    .courses-container {
+        flex-direction: column;
+    }
+}
+
+
+/* #######################  CAMPUS SECTION  ###################### */
+
+.campuses {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.campus-col {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    /* flex-basis: 32%; */
+    position: relative;
+}
+
+.campus-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.campus-col img {
+    width: 100%;
+    display: block;
+}
+
+.campuses h1 {
+    font-size: 2rem;
+}
+
+
+/*######## Layer Hover Effect ########*/
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(4, 9, 30, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    opacity: 1;
+    bottom: 50%;
+}
+
+@media (max-width:700px) {
+    .campus-container {
+        flex-direction: column;
+    }
+}
+
+
+/* ################################################################### */
+
+.facilities {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.facilities h1 {
+    font-size: 2rem;
+}
+
+.facilities-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.facility {
+    flex-basis: 31%;
+    border-radius: 10px;
+    /* margin-bottom: 5% */
+    text-align: left;
+}
+
+.facility img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width:700px) {
+    .facilities-container {
+        flex-direction: column;
+    }
+}
+
+
+/* #################################################### */
+
+.footer {
+    height: 12vh;
+    background-color: rgba(4, 9, 30, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ######################################## ABOUT PAGE ############################################################ */
+
+.about-header {
+    min-height: 70vh;
+    width: 100%;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('/img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-us {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+
+.about-heading {
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    font-size: 1.8rem;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10% 0;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.text-area p {
+    padding: 12px 50px 0 0;
+}
+
+.col {
+    flex-basis: 48%;
+}
+
+.text-area a {
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 5%;
+    padding: 8px 20px;
+    border: 1px solid rgb(204, 54, 54);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(204, 54, 54) 50%, rgb(59, 58, 58) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+.text-area a:hover {
+    color: white;
+    background-position: left bottom;
+}
